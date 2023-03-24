@@ -5,6 +5,10 @@ const menu = [
   { title: "Items", path: "/items" },
   { title: "Machines", path: "/machines" },
 ];
+
+function openMobileMenu() {
+  document.querySelector("#mobile-menu")!.classList.toggle("hidden")
+}
 </script>
 
 <template>
@@ -13,7 +17,7 @@ const menu = [
       <div class="relative flex h-16 items-center justify-between">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
           <!-- Mobile menu button-->
-          <button type="button"
+          <button @click="openMobileMenu" type="button"
             class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-[var(--tertiary-color)] hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[var(--secondary-color)]"
             aria-controls="mobile-menu" aria-expanded="false">
             <span class="sr-only"></span>
@@ -48,10 +52,10 @@ const menu = [
       </div>
     </div>
 
-    <div class="sm:hidden" id="mobile-menu">
+    <div class="sm:hidden hidden" id="mobile-menu">
       <div class="space-y-1 px-2 pt-2 pb-3 mb-4">
         <span v-for="voice in menu"
-          class="cursor-pointer w-full mt-4 block font-semibold border-2 p-1 border-[var(--secondary-color)] rounded-lg bg-[var(--quaternary-color)] text-[var(--secondary-color)] w-24 text-center border-b-[5px]">
+          class="cursor-pointer w-full mt-4 block font-semibold border-2 p-1 border-[var(--secondary-color)] rounded-lg bg-[var(--quaternary-color)] text-[var(--secondary-color)] text-center border-b-[5px]">
           <NuxtLink :to="voice.path">{{ voice.title }}</NuxtLink>
         </span>
       </div>
