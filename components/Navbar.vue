@@ -55,7 +55,7 @@ function openMobileMenu() {
     <div class="sm:hidden hidden" id="mobile-menu">
       <div class="space-y-1 px-2 pt-2 pb-3 mb-4">
         <span v-for="voice in menu"
-          class="cursor-pointer w-full mt-4 block font-semibold border-2 p-1 border-[var(--secondary-color)] rounded-lg bg-[var(--quaternary-color)] text-[var(--secondary-color)] w-24 text-center border-b-[5px]">
+          class="cursor-pointer w-full mt-4 block font-semibold border-2 p-1 border-[var(--secondary-color)] rounded-lg bg-[var(--quaternary-color)] text-[var(--secondary-color)] text-center border-b-[5px]">
           <NuxtLink :to="voice.path">{{ voice.title }}</NuxtLink>
         </span>
       </div>
