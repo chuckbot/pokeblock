@@ -6,6 +6,13 @@ const menu = [
   { title: "Machines", path: "/machines" },
 ];
 
+const logo = computed(() => {
+  return new URL("@/assets/images/ash.png", import.meta.url).href;
+});
+const appName = computed(() => {
+  return new URL("@/assets/images/nome-app.png", import.meta.url).href;
+});
+
 function openMobileMenu() {
   document.querySelector("#mobile-menu")!.classList.toggle("hidden");
 }
@@ -35,12 +42,14 @@ function openMobileMenu() {
         </div>
         <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
           <div class="flex flex-shrink-0 items-center">
-            <img class="block h-8 w-auto lg:hidden" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-              alt="Dekpoke Logo" />
-            <img class="hidden h-8 w-auto lg:block" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-              alt="Dekpoke Logo" />
+            <Image :height="120" :width="120" class="hidden h-[50px] w-auto lg:block mt-1 mr-2" :alt="'Dekpoke Logo'"
+              :path="appName" />
+            <Image :height="120" :width="120" class="block h-[50px] w-auto lg:hidden" :alt="'Dekpoke Logo'"
+              :path="logo" />
+            <Image :height="120" :width="120" class="hidden h-[50px] w-auto lg:block" :alt="'Dekpoke Logo'"
+              :path="logo" />
           </div>
-          <div class="hidden sm:ml-6 sm:block">
+          <div class="hidden sm:ml-6 sm:mt-2 sm:block">
             <div class="flex space-x-4">
               <span v-for="voice in menu"
                 class="cursor-pointer font-semibold border-2 p-1 border-[var(--secondary-color)] rounded-lg bg-[var(--quaternary-color)] text-[var(--secondary-color)] w-24 text-center border-b-[5px]">
