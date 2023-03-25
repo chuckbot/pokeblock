@@ -8,10 +8,10 @@ function openLinkedIn() {
 }
 </script>
 <template>
-  <footer class="min-h-[130px] border-t-4 border-t-[var(--tertiary-color)] bg-[var(--tertiary-color)] text-center">
-    <div class="mt-6 flex justify-center">
-
-    </div>
+  <footer
+    class="min-h-[130px] border-t-2 border-t-[var(--secondary-color)] bg-[var(--tertiary-color)] text-center"
+  >
+    <div class="mt-6 flex justify-center"></div>
 
     <div class="mt-6">
       <h3 class="cursor-pointer text-base" @click="openLinkedIn">
