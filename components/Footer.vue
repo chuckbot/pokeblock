@@ -8,9 +8,7 @@ function openLinkedIn() {
 }
 </script>
 <template>
-  <footer
-    class="min-h-[130px] border-t-2 border-t-[var(--secondary-color)] bg-[var(--tertiary-color)] text-center"
-  >
+  <footer class="min-h-[130px] border-t-2 border-t-[var(--secondary-color)] bg-[var(--tertiary-color)] text-center">
     <div class="mt-6 flex justify-center"></div>
 
     <div class="mt-6">
