@@ -19,7 +19,7 @@ function openMobileMenu() {
 </script>
 
 <template>
-  <nav class="bg-[var(--primary-color)] text-[var(--quaternary-color)] border-b-2 border-b-[var(--secondary-color)]">
+  <nav class="bg-[var(--tertiary-color)] text-[var(--quaternary-color)] border-b-2 border-b-[var(--secondary-color)]">
     <div class="mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex h-16 items-center justify-between">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -45,8 +45,6 @@ function openMobileMenu() {
             <Image :height="120" :width="120" class="hidden h-[50px] w-auto lg:block mt-1 mr-2" :alt="'Dekpoke Logo'"
               :path="appName" />
             <Image :height="120" :width="120" class="block h-[50px] w-auto lg:hidden" :alt="'Dekpoke Logo'"
-              :path="logo" />
-            <Image :height="120" :width="120" class="hidden h-[50px] w-auto lg:block" :alt="'Dekpoke Logo'"
               :path="logo" />
           </div>
           <div class="hidden sm:ml-6 sm:mt-2 sm:block">
